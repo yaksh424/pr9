@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Лавка у Оливандера — магазин</title>
+  </head>
+  <body>
+    <h1>Лавка у Оливандера</h1>
+    <p>Пример минимального магазина — товары:</p>
+    <ul>
+      {% for p in products %}
+      <li>
+        <strong>{{ p.name }}</strong> — {{ p.price }} ₽<br />
+        {% if p.description %}{{ p.description }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
